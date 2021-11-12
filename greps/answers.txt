@@ -1,38 +1,80 @@
+# Catch'em All 2: The grep Edition
+# In the forest, our scanners have detected the presence of pokemon.
+
+# Part 1: Catch 'em
+# a) In the answers file, found in the greps directory, show the grep statement you used to catch each pokemon and save to a txt file, in the format [pokemon name].txt
+# b) Save the each pokemon as a separate .txt file in the captured directory.
+# c) In which section of the forest (which scan file) did you find each pokemon?
+
 # Part 1
 ### a)
 
+filescan_001
+ggrep -P -r "blas.+toise" ./forest/filescan_00.1 > blastoise.txt
+ggrep -P "beed" ./forest/filescan_00.1 > beedrill.txt
+ggrep -P "butt" ./forest/filescan_00.1 > butterfree.txt
+ggrep -P "bulb" ./forest/filescan_00.1 > bulbasaur.txt
 
 
+filescan_002
+ggrep -P -r "char.+mander" ./forest/filescan_00.2 > charmander.txt
+ggrep -P -r "char.+izard" ./forest/filescan_00.2 > charizard.txt
+ggrep -P -r "char.+meleon" ./forest/filescan_00.2 > charmeleon.txt
 
-### b)
+
+filescan_003
+ggrep -P "ivy" ./forest/filescan_00.3 > ivysaur.txt
+ggrep -P "jigg" ./forest/filescan_00.3 > jigglypuff.txt
+ggrep -P "meo" ./forest/filescan_00.3 > meowth.txt
+ggrep -P "pik" ./forest/filescan_00.3 > pikachu.txt
 
 
+filescan_004
+ggrep -P "psy" ./forest/filescan_00.4 > psyduck.txt
+ggrep -P "squ" ./forest/filescan_00.4 > squirtle.txt
+ggrep -P "ven" ./forest/filescan_00.4 > venusaur.txt
+ggrep -P "war" ./forest/filescan_00.4 > wartortle.txt
+
+## b)
+
+Saved in captured directory
 
 ### c)
 
+filescan_00.1
+beedrill
+blastoise
+bulbasaur
+butterfree
+
+filescan_00.2
+charizard
+charmander
+charmeleon
+
+filescan_00.3
+ivysaur
+jigglypuff
+meowth
+pikachu
+
+filescan_00.4
+psyduck
+squirtle
+venusaur
+wartortle
 
 
 
+# Part 2: Stats
+# a) How many pokemon are there? Show your grep that you used to get to that number.
+ls | wc -l
 
+# b) Who are the three biggest pokemon? (number of lines) Show the grep that you used to get to the result.
 
+ls | wc -l *.txt | sort -r
 
-
-
-
-
-
-
-# Part 2
-### a)
-
-
-
-
-
-
-### b)
-
-
+Three largest: Pikachu, Charizard, Beedrill
 
 
 
